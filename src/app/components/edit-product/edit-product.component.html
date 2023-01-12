@@ -1,0 +1,46 @@
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-9 mx-auto text-center">
+          <h1 class="text-white">EditProduct</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <form #productForm="ngForm" (ngSubmit)="editProduct()">
+  
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Nom du Produit" [(ngModel)]="produit.nom"
+                [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Marque du Produit" [(ngModel)]="produit.marque"
+                [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Catégorie du Produit" [(ngModel)]="produit.categorie"
+                [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Description du Produit" [(ngModel)]="produit.description"
+                  [ngModelOptions]="{standalone: true}">
+              </div>
+            <div class="form-group">
+              <input type="number" class="form-control" placeholder="Prix" [(ngModel)]="produit.prix"
+                [ngModelOptions]="{standalone: true}">
+            </div>
+  
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary py-3 px-5" value="EditProduct">
+            </div>
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  </div>
